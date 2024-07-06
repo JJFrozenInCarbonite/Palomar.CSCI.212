@@ -1,0 +1,1 @@
+F(bit1, bit2, bit3, bit4) = bit2 * bit4 + bit2' * bit3
