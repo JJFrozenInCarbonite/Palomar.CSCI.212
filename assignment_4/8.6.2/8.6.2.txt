@@ -1,0 +1,235 @@
+
+The full log of a second run is listed below.
+A. This log indicates the r4 register is being used to store wye.
+B. The register changes to match the value of -` + the input from the user
+C. It uses 12 bytes, 4 to load the address instruction, 4 to hold the value instruction, and 4 for the add instruction
+
+Using host libthread_db library "/lib/arm-linux-gnueabihf/libthread_db.so.1".
+
+Breakpoint 1, main () at assignment_4/8.6.1/8.6.1.c:15
+15        ptr = &ex;
+(gdb) info registers
+r0             0x1                 1
+r1             0xfffef164          4294898020
+r2             0xfffef16c          4294898028
+r3             0x1047c             66684
+r4             0xfffef164          4294898020
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0xf7f83000          4160237568
+sp             0xfffeefd8          0xfffeefd8
+lr             0xf7e333c0          -136105024
+pc             0x10488             0x10488 <main+12>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+16        ex = 305441741;
+(gdb) info registers
+r0             0x1                 1
+r1             0xfffef164          4294898020
+r2             0xfffef16c          4294898028
+r3             0xfffeefd8          4294897624
+r4             0xfffef164          4294898020
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0xf7f83000          4160237568
+sp             0xfffeefd8          0xfffeefd8
+lr             0xf7e333c0          -136105024
+pc             0x10490             0x10490 <main+20>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+17        wye = -1;
+(gdb) info registers
+r0             0x1                 1
+r1             0xfffef164          4294898020
+r2             0xfffef16c          4294898028
+r3             0x1234abcd          305441741
+r4             0xfffef164          4294898020
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0xf7f83000          4160237568
+sp             0xfffeefd8          0xfffeefd8
+lr             0xf7e333c0          -136105024
+pc             0x10498             0x10498 <main+28>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+18        printf("Enter an integer: ");
+(gdb) info registers
+r0             0x1                 1
+r1             0xfffef164          4294898020
+r2             0xfffef16c          4294898028
+r3             0x1234abcd          305441741
+r4             0xffffffff          4294967295
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0xf7f83000          4160237568
+sp             0xfffeefd8          0xfffeefd8
+lr             0xf7e333c0          -136105024
+pc             0x1049c             0x1049c <main+32>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+19        scanf("%i", ptr);
+(gdb) info registers
+r0             0x12                18
+r1             0x0                 0
+r2             0x0                 0
+r3             0x0                 0
+r4             0xffffffff          4294967295
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0xfbad2284          4222427780
+sp             0xfffeefd8          0xfffeefd8
+lr             0x104a4             66724
+pc             0x104a4             0x104a4 <main+40>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+Enter an integer: 1
+20        wye += *ptr;
+(gdb) info registers
+r0             0x1                 1
+r1             0x0                 0
+r2             0x0                 0
+r3             0x0                 0
+r4             0xffffffff          4294967295
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0x0                 0
+sp             0xfffeefd8          0xfffeefd8
+lr             0x104b0             66736
+pc             0x104b0             0x104b0 <main+52>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+21        printf("The result is %i\n", wye);
+(gdb) info registers
+r0             0x1                 1
+r1             0x0                 0
+r2             0x0                 0
+r3             0x1                 1
+r4             0x0                 0
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0x0                 0
+sp             0xfffeefd8          0xfffeefd8
+lr             0x104b0             66736
+pc             0x104bc             0x104bc <main+64>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+The result is 0
+23        return 0;
+(gdb) info registers
+r0             0x10                16
+r1             0x0                 0
+r2             0x0                 0
+r3             0x0                 0
+r4             0x0                 0
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0x81010101          2164326657
+sp             0xfffeefd8          0xfffeefd8
+lr             0x104c8             66760
+pc             0x104c8             0x104c8 <main+76>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+24      }
+(gdb) info registers
+r0             0x10                16
+r1             0x0                 0
+r2             0x0                 0
+r3             0x0                 0
+r4             0x0                 0
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0xfffeefec          4294897644
+r12            0x81010101          2164326657
+sp             0xfffeefd8          0xfffeefd8
+lr             0x104c8             66760
+pc             0x104cc             0x104cc <main+80>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+__libc_start_call_main (main=0xf7e333c0 <__libc_start_call_main+140>, main@entry=0x1047c <main>, argc=-134729728, argc@entry=1, argv=0x1047c <main>, argv@entry=0xfffef164) at ../sysdeps/nptl/libc_start_call_main.h:74
+74      ../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
+(gdb) info registers
+r0             0x0                 0
+r1             0x0                 0
+r2             0x0                 0
+r3             0x0                 0
+r4             0xfffef164          4294898020
+r5             0x1                 1
+r6             0x11f14             73492
+r7             0xf7fef048          4160680008
+r8             0x1047c             66684
+r9             0xf7feed80          4160679296
+r10            0x0                 0
+r11            0x11f14             73492
+r12            0x81010101          2164326657
+sp             0xfffeeff0          0xfffeeff0
+lr             0x104c8             66760
+pc             0xf7e333c0          0xf7e333c0 <__libc_start_call_main+140>
+cpsr           0x60000010          1610612752
+fpscr          0x0                 0
+tpidruro       <unavailable>
+(gdb) n
+[Inferior 1 (process 12637) exited normally]
+(gdb) info registers
+The program has no registers now.
