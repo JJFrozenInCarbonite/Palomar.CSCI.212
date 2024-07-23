@@ -67,4 +67,3 @@ done:
     bl exit
 
 .section .note.GNU-stack,"",%progbits
-f
