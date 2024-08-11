@@ -1,0 +1,1 @@
+This does not work as the writeStr.o and readLn.o files were not provided.
